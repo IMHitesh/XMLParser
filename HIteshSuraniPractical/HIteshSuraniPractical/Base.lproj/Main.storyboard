@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DD4-K2-gnz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audio List-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Audio List" id="BYZ-38-t0r" customClass="AudioListVC" customModule="HIteshSuraniPractical" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WKN-rN-r54">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="CMq-Va-zK8"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="RW8-FS-qS6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WKN-rN-r54" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AOS-Ye-X8D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WKN-rN-r54" secondAttribute="bottom" id="CCr-sZ-9vh"/>
+                            <constraint firstItem="WKN-rN-r54" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Icz-53-9pK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WKN-rN-r54" secondAttribute="trailing" id="Xwm-1X-nsS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C1Q-bJ-Qaq"/>
+                    <connections>
+                        <outlet property="tblAudioList" destination="WKN-rN-r54" id="eyM-8F-Pnb"/>
+                        <segue destination="fEN-fk-L0U" kind="push" id="PPD-xA-jPn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="25.637181409295355"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2bE-vG-ccR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DD4-K2-gnz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M2J-dc-U51">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.63197969539999999" green="0.13723960090000001" blue="0.31920417950000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AP1-uD-TiJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sgj-yk-aIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183" y="75"/>
+        </scene>
+        <!--Audio Details-->
+        <scene sceneID="ndQ-fD-vPV">
+            <objects>
+                <viewController storyboardIdentifier="AudioDetailsVC" id="fEN-fk-L0U" customClass="AudioDetailsVC" customModule="HIteshSuraniPractical" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VJw-jy-9jc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F4T-un-I8i" customClass="UIControl">
+                                <rect key="frame" x="65.5" y="104" width="244" height="244"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="j2W-9V-7xL">
+                                        <rect key="frame" x="0.0" y="0.0" width="244" height="244"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="j2W-9V-7xL" secondAttribute="bottom" id="58t-1t-5HJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="j2W-9V-7xL" secondAttribute="trailing" id="GC5-xf-IvK"/>
+                                    <constraint firstItem="j2W-9V-7xL" firstAttribute="leading" secondItem="F4T-un-I8i" secondAttribute="leading" id="SpW-19-cU8"/>
+                                    <constraint firstItem="j2W-9V-7xL" firstAttribute="top" secondItem="F4T-un-I8i" secondAttribute="top" id="ZGA-Aj-W6e"/>
+                                    <constraint firstAttribute="width" secondItem="F4T-un-I8i" secondAttribute="height" id="pY2-Qs-Yaw"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="btnPlayAudioTap" destination="fEN-fk-L0U" eventType="touchUpInside" id="7xy-OS-0xC"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZA-ub-trZ">
+                                <rect key="frame" x="8" y="368" width="359" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8ZA-ub-trZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="5Kn-5R-u9G" secondAttribute="leading" constant="8" id="OMF-ur-vil"/>
+                            <constraint firstItem="5Kn-5R-u9G" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8ZA-ub-trZ" secondAttribute="trailing" constant="8" id="Oo6-sH-Nnu"/>
+                            <constraint firstItem="F4T-un-I8i" firstAttribute="top" secondItem="5Kn-5R-u9G" secondAttribute="top" constant="40" id="dlR-Ol-Olp"/>
+                            <constraint firstItem="8ZA-ub-trZ" firstAttribute="centerX" secondItem="F4T-un-I8i" secondAttribute="centerX" id="oVD-92-gN7"/>
+                            <constraint firstItem="F4T-un-I8i" firstAttribute="centerX" secondItem="5Kn-5R-u9G" secondAttribute="centerX" id="uoh-X6-PXM"/>
+                            <constraint firstItem="F4T-un-I8i" firstAttribute="width" secondItem="VJw-jy-9jc" secondAttribute="width" multiplier="0.65" id="wfM-AC-daL"/>
+                            <constraint firstItem="8ZA-ub-trZ" firstAttribute="top" secondItem="F4T-un-I8i" secondAttribute="bottom" constant="20" id="zFk-UR-eub"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Kn-5R-u9G"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Audio Details" id="mUA-5E-nfJ"/>
+                    <connections>
+                        <outlet property="imgAlbum" destination="j2W-9V-7xL" id="ZlO-bk-wIj"/>
+                        <outlet property="lblTitle" destination="8ZA-ub-trZ" id="nVz-Z9-NyO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v1p-Bp-WZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1669.5999999999999" y="25.637181409295355"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="placeholder" width="36.283466339111328" height="36.283466339111328"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>
